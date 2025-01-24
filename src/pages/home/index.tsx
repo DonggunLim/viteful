@@ -4,9 +4,9 @@ const HomePage = () => {
   const testFetch = async () => {
     try {
       const response = await fetch("/api/test");
-      console.log(response);
+      // console.log(response);
     } catch (error) {
-      console.log(error);
+      // console.log(error);
     }
   };
   useEffect(() => {
@@ -14,7 +14,7 @@ const HomePage = () => {
   }, []);
   return (
     <>
-      <h1>Home</h1>
+      <h1>Home Page</h1>
     </>
   );
 };

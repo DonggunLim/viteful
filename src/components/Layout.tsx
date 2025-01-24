@@ -11,7 +11,8 @@ const Layout: FC<LayoutProps> = ({ children }) => {
   return (
     <>
       <nav>
-        <button onClick={() => navigate("/")}>Home</button>
+        <button onClick={() => navigate("/")}>main</button>
+        <button onClick={() => navigate("/home")}>home</button>
         <button onClick={() => navigate("/profile")}>Profile</button>
       </nav>
       {children}
