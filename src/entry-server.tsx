@@ -5,7 +5,7 @@ import { Suspense } from "react";
 import SeoHead from "./components/SeoHead";
 
 export const render = (_url: string, _ssrManifest: string) => {
-  const html = (path: string) => {
+  const appHtml = (path: string) => {
     return ReactDOMServer.renderToString(
       <Suspense fallback={<div>Exec SSR...</div>}>
         <StaticRouter location={path}>
@@ -17,5 +17,5 @@ export const render = (_url: string, _ssrManifest: string) => {
   const seoHead = (path: string) => {
     return ReactDOMServer.renderToString(<SeoHead path={path} />);
   };
-  return { html, seoHead };
+  return { appHtml, seoHead };
 };
