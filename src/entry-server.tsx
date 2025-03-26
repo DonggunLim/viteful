@@ -4,7 +4,7 @@ import Router from "./Router";
 import { Suspense } from "react";
 import SeoHead from "./components/SeoHead";
 
-export const render = () => {
+export const render = (_url: string, _ssrManifest: string) => {
   const html = (path: string) => {
     return ReactDOMServer.renderToString(
       <Suspense fallback={<div>Exec SSR...</div>}>
