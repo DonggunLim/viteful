@@ -26,11 +26,6 @@ const useChangeSeoHead = () => {
     );
   };
 
-  // [fix] :: hydration error on server-side
-  // useLayoutEffect(() => {
-  //   changeSeoHead(location.pathname);
-  // }, [location.pathname]);
-
   useEffect(() => {
     changeSeoHead(location.pathname);
   }, [location.pathname]);
